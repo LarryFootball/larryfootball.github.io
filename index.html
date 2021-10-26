@@ -77,14 +77,19 @@
       bottom: 10px;
       right: 10px;
       font-size: .62em;
-      color: #cb7ea4;
+      color: transparent;
+      text-align: center;
+      width: auto;
+      background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+      -webkit-background-clip: text;
     }
   </style>
 </head>
   <body>
     <base> <!-- lets all links open in a new window -->
+    <div id="clock"><h1>The Glow Pt. 2 Verse 2</h1></div>
     <div class="wrapper">
-      <div class="box-item">
+      <div class="box-item">  
         <div class="item-heading">Sport</div>
         <ul>
           <li><a href="http://liveonscore.tv/">liveonscore</a></li>
@@ -122,6 +127,6 @@
       </div>
     </div>
     <!-- uncomment next line to display clock -->
-    <div id="clock"></div>
+    
   </body>
 </html>
