@@ -14,7 +14,7 @@ var images = [
 var img = document.getElementById("img");
 
 function imgDisp(num) {
-    var num = Math.floor(Math.random() * 10);
+    var num = Math.floor(Math.random() * 9);
     img.style.backgroundImage = 'url("' + images[num] + '")';
     img.style.backgroundRepeat = "no-repeat";
 }
