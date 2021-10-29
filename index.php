@@ -6,7 +6,7 @@
   <meta charset="utf8">
   
   <?php
-  $bg = array('bg-01.jpg', 'bg-02.jpg', 'bg-03.jpg', 'bg-04.jpg', 'bg-05.jpg', 'bg-06.jpg', 'bg-07.jpg' ); // array of filenames
+  $bg = array('1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg', '7.jpg','8.jpg','9.jpg','10.jpg'); // array of filenames
 
   $i = rand(0, count($bg)-1); // generate random number size of the array
   $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
@@ -21,7 +21,6 @@
       width: 100%;
       min-height: 100vh;
       /* uncomment next line and link an image file to use a bg image */
-      background-image: url('https://i.pinimg.com/originals/ca/f2/39/caf23972d0b50749f998fad8ce486706.jpg');
       background-color: #D06293;
       background-repeat: no-repeat;
       background-size: cover;
@@ -29,6 +28,7 @@
       font-family: 'Helvetica', sans-serif;
       margin: 0;
       padding: 0;
+      background: url(images/<?php echo $selectedBg; ?>) no-repeat;
     }
     .wrapper {
       display: flex;
@@ -90,6 +90,7 @@
       background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
       -webkit-background-clip: text;
     }
+    
   </style>
 </head>
   <body>
