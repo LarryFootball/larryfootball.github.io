@@ -7,8 +7,7 @@ var images = [
     '6.jpg',
     '7.jpg',
     '8.jpg',
-    '9.jpg',
-    '10.jpg'
+    '9.jpg'
 ];
 
 var img = document.getElementById("img");
