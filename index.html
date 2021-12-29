@@ -2,6 +2,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>Cat's Foot</title>
+		<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1.0, user-scalable=no">
 		<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
 		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 		<link rel="stylesheet" type="text/css" href="style.css"/>
@@ -36,9 +37,52 @@
 			function toh( toh1 ) {
 			  document.getElementById(toh1).style.backgroundColor="#ffffff";
 			}
+			
+			  var today_obj=new Date()
+    var today_date=today_obj.getDate()
+    
+    var tips=new Array()
+    //Configure the below variable to contain the "header" of the tip
+    var tiptitle='<img src="../../tip.gif"> <b>JavaScript Tip of the day</b><br />'
+    
+    //Configure the below array to hold the 31 possible tips of the month
+    tips[1]='Need Help With Viagra Addiction? Same'
+    tips[2]='Watching Mcdonalds employees spit in my food'
+    tips[3]='( o Y o )'
+    tips[4]='Dick'
+    tips[5]='I aint had my weeeweee sucked properly in about a month'
+    tips[6]="Where is my vacuum mouth veteran?"
+    tips[7]="If your pussy don't smell like wet monkey scalp I do not want it"
+    tips[8]='I dont need a GF, Life fucks me every day'
+    tips[9]="Why TF my dick so small?"
+    tips[10]="Fuck all these kids getting Iphones for christmas, All I got was the clap"
+    tips[11]="Your pussy feels better than my fanciest sock"
+    tips[12]="Youre alright, but fuck you"
+    tips[13]="I love boobies"
+    tips[14]='┌∩┐(◣_◢)┌∩┐'
+    tips[15]='d[ o_0 ]b'
+    tips[16]='ε(´סּ︵סּ`)з'
+    tips[17]='(♥_♥)'
+    tips[18]="¯\_(ツ)_/¯ "
+    tips[19]='(✿ ♥‿♥) '
+    tips[20]='ˁ˚ᴥ˚ˀ'
+    tips[21]='(╯°□°）╯ ︵ ┻━┻'
+    tips[22]='(.)(.)'
+    tips[23]='(っ◕‿◕)っ'
+    tips[24]='No Ads, Just Send me your used underwear'
+    tips[25]='Morning pussy is dangerous it been marinating all night'
+    tips[26]='When your wifes boyfriend brings home Mcdonalds'
+    tips[27]='SMFH  I would fuck someone in the ass for some dumplings rn'
+    tips[28]='Merry Chrispus'
+    tips[29]='Merry Christmas'
+    tips[30]='My dick hurtttttttttttttttttt'
+    tips[31]='I Love You Very Much, Yes, You. ;) x'
+    
 		</script>
 	</head>
 	<body>
+		 width: 100%;
+     		 min-height: 100vh;
 		<div class="maincontainer">
 			<div class="bottomcontainer">
 				<div class="button" id="btn1" onclick = "show('main1');hide('main2');tog('btn1');toh('btn2');"></div>
@@ -83,46 +127,7 @@
     
     <script>
     
-    var today_obj=new Date()
-    var today_date=today_obj.getDate()
-    
-    var tips=new Array()
-    //Configure the below variable to contain the "header" of the tip
-    var tiptitle='<img src="../../tip.gif"> <b>JavaScript Tip of the day</b><br />'
-    
-    //Configure the below array to hold the 31 possible tips of the month
-    tips[1]='Need Help With Viagra Addiction? Same'
-    tips[2]='Watching Mcdonalds employees spit in my food'
-    tips[3]='( o Y o )'
-    tips[4]='Dick'
-    tips[5]='I aint had my weeeweee sucked properly in about a month'
-    tips[6]="Where is my vacuum mouth veteran?"
-    tips[7]="If your pussy don't smell like wet monkey scalp I do not want it"
-    tips[8]='I dont need a GF, Life fucks me every day'
-    tips[9]="Why TF my dick so small?"
-    tips[10]="Fuck all these kids getting Iphones for christmas, All I got was the clap"
-    tips[11]="Your pussy feels better than my fanciest sock"
-    tips[12]="Youre alright, but fuck you"
-    tips[13]="I love boobies"
-    tips[14]='┌∩┐(◣_◢)┌∩┐'
-    tips[15]='d[ o_0 ]b'
-    tips[16]='ε(´סּ︵סּ`)з'
-    tips[17]='(♥_♥)'
-    tips[18]="¯\_(ツ)_/¯ "
-    tips[19]='(✿ ♥‿♥) '
-    tips[20]='ˁ˚ᴥ˚ˀ'
-    tips[21]='(╯°□°）╯ ︵ ┻━┻'
-    tips[22]='(.)(.)'
-    tips[23]='(っ◕‿◕)っ'
-    tips[24]='No Ads, Just Send me your used underwear'
-    tips[25]='Morning pussy is dangerous it been marinating all night'
-    tips[26]='When your wifes boyfriend brings home Mcdonalds'
-    tips[27]='SMFH  I would fuck someone in the ass for some dumplings rn'
-    tips[28]='Merry Chrispus'
-    tips[29]='Merry Christmas'
-    tips[30]='My dick hurtttttttttttttttttt'
-    tips[31]='I Love You Very Much, Yes, You. ;) x'
-    
+  
    
 				<div class="bookmarkscontainer">
 					
