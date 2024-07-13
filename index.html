@@ -1,183 +1,92 @@
-<html>
-	<head>
-		<meta charset="UTF-8" />
-		<title>Cat's Foot</title>
-		<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
-		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-		<link rel="stylesheet" type="text/css" href="style.css"/>
-		<script type="text/javascript">
-			
-			$(document).ready(function(){
-				  //URL of the RSS feed
-				  $(".marquee").toggleClass("microsoft");
-				  var feed_url = 'http://feeds.bbci.co.uk/news/rss.xml?edition=uk';
-				$.ajax({
-				  url      : 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(feed_url),
-				  dataType : 'json',
-				  success  : function (data) {
-					if (data.responseData.feed && data.responseData.feed.entries) {
-					  $.each(data.responseData.feed.entries, function (i, e) {
-						$("#news1").append('<a target="_blank" class="mlink" href="' + e.link + '">' + e.title + '.</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;');
-					  });
-					}
-				  }
-				});
-			});
-			
-			function show( show1 ) {
-			  document.getElementById(show1).style.display="block";
-			}
-			function hide( hide1 ) {
-			  document.getElementById(hide1).style.display="none";
-			}
-			function tog( tog1 ) {
-			  document.getElementById(tog1).style.backgroundColor="#777777";
-			}
-			function toh( toh1 ) {
-			  document.getElementById(toh1).style.backgroundColor="#ffffff";
-			}
-		</script>
-	</head>
-	<body>
-		<div class="maincontainer">
-			<div class="bottomcontainer">
-				<div class="button" id="btn1" onclick = "show('main1');hide('main2');tog('btn1');toh('btn2');"></div>
-				<div class="button" id="btn2" onclick = "show('main2');hide('main1');tog('btn2');toh('btn1');"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href='style.css'>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+    <title>Home</title>
+</head>
+<body>
+    <section id='cards'>
+        <div class="card" id="Ena">
+            <img src='1.jpg' width='150px' height="150px">
+            <h1>🔊</h1>
+            <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						 Media
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+						<a href='https://www.youtube.com/feed/subscriptions'><button class="dropdown-item" type="button">YouTube</button></a>
+						<a href='https://www.netflix.com'><button class="dropdown-item" type="button">Netflix</button></a>
+						<a href='https://odysee.com'><button class="dropdown-item" type="button">Odysee</button></a>
+						<a href='https://squid.wtf'><button class="dropdown-item" type="button">Music</button></a>
+					</div>
+                </div>    
+        </div>
+        <div class="card" id="Nadeshiko">
+            <img src='2.jpg' width='150px' height="150px">
+            <h1>🧰</h1>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Resources
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <a href='https://www.reddit.com/r/Piracy/wiki/megathread/' target='_blank'><button class="dropdown-item" type="button">R/piracy</button></a>
+                    <a href='https://fmhy.pages.dev/' target='_blank'><button class="dropdown-item" type="button">Free Media</button></a>
+					<a href='https://play.pokemonshowdown.com/' target='_blank'><button class="dropdown-item" type="button">Showdown</button></a>
+					<a href='https://theindex.moe/' target='_blank'><button class="dropdown-item" type="button">Anime</button></a>
+                    <a href='https://mediasavvy.pages.dev/Wiki/' target='_blank'><button class="dropdown-item" type="button">Media Curator</button></a>
+                </div>
+            </div>    
+        </div>
 
-				<div class="marqueebar" id="marqueebar">
-					<marquee id="news1" class="marquee2"></marquee>
-				</div>
-				<div class="searchbar">
-					<form name="form1" action="https://duckduckgo.com/" target="_blank" method="get" >
-						<input type="text" autocomplete="off" placeholder="search..." name="q" class="searchinput"></input>
-					</form>
-				</div>
-			</div>
-			<div class="time" id="time">
-				<script>
-					//document.getElementById("main").innerHTML = Date();
-					function updateClock() {
-						var days = ['SUNDAY','MONDAY','TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY'];
-						var m = new Date();
-						var dateString =
-						  (days[ m.getDay() ]) + " " +
-						  ("0" + (m.getMonth()+1)).slice(-2) +"/"+
-						  ("0" + m.getDate()).slice(-2) + "/" +
-						  m.getFullYear() +" "+
-						  ("0" + m.getHours()).slice(-2) + ":" +
-						  ("0" + m.getMinutes()).slice(-2) + ":" +
-						  ("0" + m.getSeconds()).slice(-2);
-						
-						// set the content of the element with the ID time to the formatted string
-						document.getElementById('time').innerHTML = dateString;
+        <div class="card" id="Rin">
+			<div></div>
+            <img src='3.jpg' width='150px' height="150px">
+            <h1>📰</h1>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					News
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+					<a href='https://news.ycombinator.com'><button class="dropdown-item" type="button">Hacker News</button></a>
+					<a href='https://www.techmeme.com'><button class="dropdown-item" type="button">Techmeme</button></a>
+					<a href='https://slashdot.org'><button class="dropdown-item" type="button">Slashdot</button></a>
+					<a href='https://9to5linux.com'><button class="dropdown-item" type="button">9to5Linux</button></a>
+					<a href='https://itsfoss.com/news'><button class="dropdown-item" type="button">It's FOSS</button></a>
+					<a href='https://www.omgubuntu.co.uk'><button class="dropdown-item" type="button">OMG! Ubuntu!</button></a>
+					<a href='https://linuxinsider.com'><button class="dropdown-item" type="button">LinuxInsider</button></a>
+					<a href='https://daringfireball.net'><button class="dropdown-item" type="button">Daring Fireball</button></a>
+					</div>
+            </div>    
+        </div>
 
-						// call this function again in 1000ms
-						setTimeout(updateClock, 1000);
-					}
-					updateClock(); // initial call
-				</script>
-			</div>
-			<div class="main" id="main1">
-<div class="sidebar" style="background-image: url('https://media.tenor.com/I9yjcAGMizcAAAAC/boobs-anime.gif');"></div>        
-				<div class="welcome">チキンナゲット</div>
-				<div class="bookmarkscontainer">
+        <div class="card" id="Aoi">
+                <img src='4.jpg' width='150px' height="150px">
+                <h1>🖍️</h1>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Develop
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <a href='https://github.com' target='_blank'><button class="dropdown-item" type="button">Github</button></a>
+                        <a href='https://codepen.io' target='_blank'><button class="dropdown-item" type="button">Codepen</button></a>
+                        <a href='https://www.geeksforgeeks.org'><button class="dropdown-item" type="button">GeeksforGeeks</button></a>
+						<a href='https://chat.openai.com'><button class="dropdown-item" type="button">ChatGPT</button></a>
+						<a href='https://developer.mozilla.org'><button class="dropdown-item" type="button">MDN Web Docs</button></a>
+						<a href="https://www.codewars.com/0"><button class="dropdown-item" type="button">Code Wars</button>
+						<a href='https://www.w3schools.com' target='_blank'><button class="dropdown-item" type="button">W3Schools</button></a>
+                    </div>
+                </div>    
+            </div>
 
-<!-- Programming Utilities -->
-<ul>
-  <li><a><b>Utils</b></a></li>
-  <li>
-    <a href="https://github.com/" class="clink" target="_blank">
-      Github
-    </a>
-  </li>
-  <li>
-    <a href="https://chat.openai.com/" class="clink" target="_blank">
-      ChatGPT
-    </a>
-  </li>
-  <li>
-    <a href="https://www.codewars.com/" class="clink" target="_blank">
-      Codewars
-    </a>
-  </li>
-  <li>
-    <a href="https://codepen.io/" class="clink" target="_blank">
-      CodePen
-    </a>
-  </li>
-  <li>
-    <a href="https://stackoverflow.com/" class="clink" target="_blank">
-      Stack Overflow
-    </a>
-  </li>
-</ul>
-
-<!-- Entertainment -->
-<ul>
-  <li><a><b>Video</b></a></li>
-  <li>
-    <a href="https://www.netflix.com/browse" class="clink" target="_blank">
-      Netflix
-    </a>
-  </li>
-  <li>
-    <a href="https://www.youtube.com/" class="clink" target="_blank">
-      Youtube
-    </a>
-  </li>
-  <li>
-    <a href="https://invidious.example/" class="clink" target="_blank">
-      Invidious
-    </a>
-  </li>
-  <li>
-    <a href="https://aniwave.to/home" class="clink" target="_blank">
-    Anime
-    </a>
-  </li>
-  <li>
-    <a href="https://rentry.co/megathread class="clink" target="_blank">
-    More
-    </a>
-  </li>
-</ul>
-
-<!-- Technology News -->
-<ul>
-  <li><a><b>News:</b></a></li>
-  <li>
-    <a href="https://lemmy.world/" class="clink" target="_blank">
-      Lemmy
-    </a>
-  </li>
-  <li>
-    <a href="https://yle.fi/uutiset/osasto/news/" class="clink" target="_blank">
-      Yle
-    </a>
-  </li>
-  <li>
-    <a href="https://news.ycombinator.com/" class="clink" target="_blank">
-      HN
-    </a>
-  </li>
-  <li>
-    <a href="https://slashdot.org/" class="clink" target="_blank">
-      /.
-    </a>
-  </li>
-  <li>
-    <a href="https://arstechnica.com/" class="clink" target="_blank">
-      Ars Technica
-    </a>
-  </li>
-</ul>
-
-				</div>
-			</div>
-			<div class="main" id="main2" style="display:none">
-				<div class="sidebar" style="background-image: url(img/m2.gif);"></div>
-				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/eKYZ5Xf9yrw?controls=0" frameborder="0" allowfullscreen></iframe>			
-			</div>
-		</div>
-	</body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
 </html>
